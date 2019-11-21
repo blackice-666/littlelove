@@ -1,13 +1,17 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+      <mine></mine>
     <router-view/>
   </div>
 </template>
 
 <script>
+  import  mine from './lin/mine'
 export default {
-  name: 'App'
+  name: 'App',
+  components:{
+    mine
+  }
 }
 </script>
 

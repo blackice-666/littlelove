@@ -1,18 +1,16 @@
 <template>
   <div id="app">
       
-    
-      <div class="maindiv"><router-view></router-view></div>
-    <ourDown></ourDown>
+    <router-view/>
   </div>
 </template>
 
 <script>
- import ourDown from "./base/ourDown";
-export default {
+  import  mine from './lin/mine'
+  export default {
   name: 'App',
   components:{
-    ourDown
+    mine,
   }
 }
 </script>
@@ -25,8 +23,5 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-}
-.maindiv{
-  margin-bottom: 70px;
 }
 </style>

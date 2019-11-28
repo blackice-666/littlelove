@@ -1,10 +1,6 @@
 <template>
   <div id="box">
-    <Header>
-      <span v-for="(item,index) in myDres" :key="index">{{item.sheng}}</span>
-    </Header>
-
-    <!-- {{ myDres}} -->
+    <Header></Header>
     <div class="top">
       <img src="../../static/img/qie.jpg" height="392" width="524" />
       <div v-for="(item,index) in myUser" :key="index">
@@ -15,7 +11,7 @@
     </div>
     <div>
       <ul class="menu">
-        <li v-for="(item,index) in img" :key="index">
+        <li v-for="item in img">
           <router-link :to="{name: item.path}">
             <img :src="item.mg" />
             {{ item.name }}
@@ -25,7 +21,7 @@
       </ul>
     </div>
     <p>小米音箱APP版本：V2.2.10 | 稳定版</p>
-    
+     <!-- {{ myUser }} -->
   </div>
 </template>
 <!-- 我的主页 -->
@@ -73,26 +69,21 @@ export default {
         {
           mg: "../../static/img/icon_night_mode.png",
           name: "夜间模式"
-        }
+        },
       ]
     };
   },
-  computed: {
-    myUser() {
+  computed:{
+    myUser(){
       return {
-        myUser: this.$store.state.yonghu
-      };
-    },
-     myDres() {
-      return {
-        myDres: this.$store.state.dizhi
-      }
-    },
-},
-components: {
+         myUser:this.$store.state.yonghu
+      } 
+    }
+  },
+  components: {
     Header
-  }
-}
+  },
+};
 </script>
 
 <style scoped>
@@ -153,3 +144,4 @@ li {
   color: red;
 }
 </style>
+    

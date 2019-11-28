@@ -11,7 +11,7 @@
 
     <br />
     <input type="button" value="保存" @click="cun" />
-    <input type="button" value="取消" @click="back"/>
+    <input type="button" value="取消" />
   </div>
 </template>
 
@@ -28,15 +28,8 @@ export default {
   },
   methods: {
     cun() {
-      if(this.users.id==""||this.users.name==""){
-          alert("请输入内容")
-      }else{
-        this.$store.dispatch("addUsers", this.users);
-        this.$router.back(1)
-      }
-    },
-    back(){
-      this.$router.back(1)
+      console.log(this.users);
+      this.$store.dispatch("addUsers", this.users);
     }
   }
 };

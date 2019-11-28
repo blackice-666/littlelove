@@ -37,10 +37,10 @@ export default {
     },
     cun() {
       this.$store.dispatch("addDres", this.dres);
-      this.$router.back(1);
+      this.$router.go(-1);
     },
     back() {
-      this.$router.back(1);
+      this.$router.go(-1)
     }
   }
 };

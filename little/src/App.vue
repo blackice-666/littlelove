@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <router-link to="/my">去到我的页面</router-link>
       <mine></mine>
     <router-view/>
   </div>

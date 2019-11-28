@@ -1,7 +1,7 @@
 <template>
-    <div class = "purchase">
-        {{ shop }}
-    </div>
+<!--    <div class = "purchase">-->
+<!--        {{ shop }}-->
+<!--    </div>-->
 </template>
 <!--/已购信息/-->
 <script>

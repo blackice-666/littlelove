@@ -25,9 +25,7 @@
             <p>{{ item.name }}</p>
             <p>{{ item.time }}</p>
           </div>
-          <div class="menus">
-            <p>{{ item.main }}</p>
-          </div>
+          <div class="menus">{{ item.main }}</div>
         </div>
       </div>
     </div>
@@ -60,6 +58,11 @@ export default {
     getCookie() {
       let a = Cookies.get("name");
       this.navWord = a == undefined ? [] : JSON.parse(a);
+      let that = this;
+      this.navWord = this.navWord.filter(function(item) {
+        console.log(that);
+        return item.goodsId == that.$route.params.our;
+      });
     }
   }
 };
@@ -106,7 +109,10 @@ export default {
       }
     }
     .menus {
-      width: 100%;
+      width: 90%;
+      white-space: normal;
+      word-break: break-all;
+      word-wrap: break-word;
       text-indent: 1em;
     }
   }

@@ -55,20 +55,25 @@ export default {
       let i = Math.random().toString(36).substr(2).slice(1,7);
       let taday = new Date();
       let  mytime=taday.toLocaleTimeString(); //获取当前时间 
-      this.$router.push({name:"detail",params:{ our: this.$route.params.com}})
+     
       console.log(i);
 
       
-      
-      console.log(cookie);
+      let goodsId=this.$route.params.com;
+      console.log(goodsId);
       var strs = {
+        goodsId:goodsId,
         name: i, //随机名字
         time: mytime, //随机时间
         main: this.commentNav
       };
 
       cookie.unshift(strs);
+      console.log(cookie);
+      
       Cookies.set("name", JSON.stringify(cookie), { expires: 7 });
+
+       this.$router.push({name:"detail",params:{ our: this.$route.params.com}})
     }
   }
 };
@@ -76,7 +81,7 @@ export default {
 
 <style lang="less" scoped>
 .commentImg {
-  margin-top: 25px;
+  margin-top: 100px;
   .mui-input {
     textarea {
       resize: none;

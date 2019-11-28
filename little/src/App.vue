@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-      <mine></mine>
+      <ourDown></ourDown>
     <router-view/>
   </div>
 </template>
 
 <script>
-  import  mine from './lin/mine'
+ import ourDown from "./base/ourDown";
 export default {
   name: 'App',
   components:{
-    mine
+    ourDown
   }
 }
 </script>

@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <div id="box">
     <Header></Header>
     <div class="top">
@@ -8,6 +9,10 @@
         <p>小米账号：{{ item.name }}</p>
       </div>
       <i class="iconfont icon-arrow-right"></i>
+=======
+    <div class="routers">
+        <router-link to = "/purchased">已购商品</router-link>
+>>>>>>> d5b5d2835b52fbb7929fda78c865239e4d8ff04c
     </div>
     <div>
       <ul class="menu">
@@ -26,6 +31,7 @@
 </template>
 <!-- 我的主页 -->
 <script>
+<<<<<<< HEAD
 import Header from "./Header";
 export default {
   name: "mine",
@@ -78,6 +84,10 @@ export default {
       return {
          myUser:this.$store.state.yonghu
       } 
+=======
+    export default {
+        name: "mine",
+>>>>>>> d5b5d2835b52fbb7929fda78c865239e4d8ff04c
     }
   },
   components: {

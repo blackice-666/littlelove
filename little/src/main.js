@@ -3,8 +3,13 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+<<<<<<< HEAD
 import Vuex from 'vuex'
 Vue.use(Vuex);
+=======
+
+
+>>>>>>> d5b5d2835b52fbb7929fda78c865239e4d8ff04c
 Vue.config.productionTip = false
 const store = new Vuex.Store({
   state:{// 存放状态

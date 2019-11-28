@@ -9,7 +9,11 @@
     <router-link tag="li" to="/purchased">
       <i class="iconfont icon-gouwu"></i>购物
     </router-link>
+<<<<<<< HEAD
     <router-link tag="li" to="/mine">
+=======
+    <router-link tag="li" to="/My">
+>>>>>>> d5b5d2835b52fbb7929fda78c865239e4d8ff04c
       <i class="iconfont icon-wode"></i>个人
     </router-link>
   </div>

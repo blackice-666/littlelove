@@ -113,6 +113,10 @@ export default {
 }
 .nav {
   width: 100%;
+<<<<<<< HEAD
+=======
+  height: 500px;
+>>>>>>> d5b5d2835b52fbb7929fda78c865239e4d8ff04c
   .shoppublic {
     position: absolute;
     top: 50%;

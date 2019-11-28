@@ -30,6 +30,7 @@ export default new Router({
     },
     { 
       path: '/mine',
+      name:'mine',
       component: mine
     }
   ]

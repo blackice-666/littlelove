@@ -7,18 +7,24 @@ import Vuex from 'vuex'
 Vue.use(Vuex);
 Vue.config.productionTip = false
 const store = new Vuex.Store({
-  state:{
-    yonghu:{id:"花生",name:"123456789"}
+  state:{// 存放状态
+      yonghu:{id:"花生",name:"123456789"},
+      dizhi:{sheng:"北京市",shi:"北京城区",qu:"海淀区"}
   },
-  mutations:{
+  mutations:{// 更改状态的逻辑，同步操作
     addUsers(_state,val){
       this.state.yonghu=val
-      console.log(this.state.yonghu);
+    },
+    addDres(_state,val){
+      this.state.dizhi=val
     }
   },
-  actions:{
+  actions:{//提交mutation，异步操作
     addUsers(context,s){
       context.commit('addUsers',s);
+    },
+    addDres(context,s){
+      context.commit('addDres',s);
     }
   }
 })

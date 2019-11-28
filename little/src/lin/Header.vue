@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-
+      <slot>默认内容</slot>
       <span>我的</span>
     <i class="iconfont icon-saoma"></i>
   </div>
@@ -17,7 +17,10 @@
     line-height: 30px;
     margin-bottom: 20px;
   }
-  .header span{
+  .header span:nth-of-type(1){
+    float: left;
+  }
+  .header span:nth-of-type(2){
     width:90% ;
     text-align: center;
     font-size: 1.5rem;
